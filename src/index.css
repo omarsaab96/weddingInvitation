@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans text-neutral-800 bg-neutral-50;
+  }
+  
+  h1, h2, h3, h4 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 bg-primary-500 text-white font-medium rounded-md shadow hover:bg-primary-600 transition-all duration-300;
+  }
+  
+  .btn-secondary {
+    @apply px-6 py-3 bg-white text-primary-800 font-medium rounded-md shadow border border-primary-200 hover:bg-primary-50 transition-all duration-300;
+  }
+  
+  .btn-accent {
+    @apply px-6 py-3 bg-accent-500 text-white font-medium rounded-md shadow hover:bg-accent-600 transition-all duration-300;
+  }
+  
+  .input-field {
+    @apply w-full px-4 py-3 border border-neutral-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-300;
+  }
+  
+  .template-card {
+    @apply relative overflow-hidden rounded-lg shadow-elegant cursor-pointer transition-all duration-300 hover:shadow-card hover:scale-[1.02];
+  }
+  
+  .template-card-selected {
+    @apply ring-4 ring-primary-500 shadow-card;
+  }
+}
+
+.invite-heading {
+  @apply font-display text-center;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-neutral-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary-300 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary-400;
+}
+
+/* Animation classes */
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.appear-from-bottom {
+  animation: appearFromBottom 0.7s ease-out;
+}
+
+@keyframes appearFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
